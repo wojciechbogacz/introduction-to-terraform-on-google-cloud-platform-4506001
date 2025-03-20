@@ -4,9 +4,9 @@ resource "google_compute_network" "app" {
 }
 
 resource "google_compute_subnetwork" "app" {
-  name          = "test-subnetwork"
+  name          = "app"
   ip_cidr_range = "10.2.0.0/16"
-  region        = "us-west1"
+  region        = "us-central1"
   network       = google_compute_network.app.id
 }
 
